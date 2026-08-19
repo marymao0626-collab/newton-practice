@@ -11,12 +11,12 @@ def optimize(f, x0, tol=1e-6):
         first = first_derivative(f, x)
         second = second_derivative(f, x)
 
-        x_new = x - first / second
+        x_1 = x - first / second
 
         if abs(x_new - x) < tol:
             return x_new
 
-        x = x_new
+        x = x_1
         
 
 
