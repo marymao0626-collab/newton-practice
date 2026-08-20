@@ -88,8 +88,8 @@ def optimize_multivariate(f, x0, tol=1e-6):
         grad = gradient(f, x)
         H = hessian(f, x)
 
-        step = np.linalg.solve(H, grad)
-        x_new = x - step
+        eachstep = np.linalg.solve(H, grad)
+        x_new = x - eachstep
 
         if np.linalg.norm(x_new - x) < tol:
             return x_new
